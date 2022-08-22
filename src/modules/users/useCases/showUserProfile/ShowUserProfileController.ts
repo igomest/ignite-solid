@@ -12,7 +12,7 @@ class ShowUserProfileController {
       const users = this.showUserProfileUseCase.execute({
         user_id: String(user_id),
       });
-      return response.status(201).json(users);
+      return response.status(200).json(users);
     } catch (error) {
       return response.status(404).json({ error: error.message });
     }
