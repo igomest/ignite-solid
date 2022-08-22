@@ -44,7 +44,9 @@ class UsersRepository implements IUsersRepository {
   }
 
   turnAdmin(receivedUser: User): User {
-    const findIndex = this.users.findIndex((user) => user.id === receivedUser.id);
+    const findIndex = this.users.findIndex(
+      (user) => user.id === receivedUser.id
+    );
 
     if (findIndex !== -1) {
       const user = this.users[findIndex];
